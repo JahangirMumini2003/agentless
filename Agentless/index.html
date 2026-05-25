@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title data-i18n="page.title">Agentless — ИИ-риелтор для агентств и фрилансеров</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<template id="__bundler_thumbnail" data-bg-color="#ffffff">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#ffffff"/>
+    <g transform="translate(600 400)">
+      <rect x="-180" y="-180" width="360" height="360" rx="80" fill="#1f2230"/>
+      <circle cx="-60" cy="-30" r="22" fill="#3b6df0"/>
+      <circle cx="60" cy="-30" r="22" fill="#3b6df0"/>
+      <path d="M -75 65 C -50 110, 50 110, 75 65" stroke="#3b6df0" stroke-width="22" fill="none" stroke-linecap="round"/>
+      <circle cx="130" cy="-130" r="18" fill="#3b6df0"/>
+    </g>
+  </svg>
+</template>
+</head>
+<body>
+
+<!-- ============== NAV ============== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo" aria-label="Agentless">
+      <svg class="logo-mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <rect width="32" height="32" rx="10" fill="var(--ink)"/>
+        <circle cx="11.5" cy="13" r="1.9" fill="var(--accent)"/>
+        <circle cx="20.5" cy="13" r="1.9" fill="var(--accent)"/>
+        <path d="M10.2 18.8 C12.4 21.8, 19.6 21.8, 21.8 18.8" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="26" cy="7" r="1.6" fill="var(--accent)"/>
+      </svg>
+      <span>Agentless</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#how" data-i18n="nav.how">Как работает</a></li>
+        <li><a href="#benefits" data-i18n="nav.benefits">Выгоды</a></li>
+        <li><a href="#integrations" data-i18n="nav.integrations">Интеграции</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing">Тарифы</a></li>
+        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang" role="group" aria-label="Язык">
+        <button class="active">RU</button>
+        <button>UZ</button>
+        <button>EN</button>
+      </div>
+      <a href="#login" class="btn btn-ghost" data-i18n="nav.signin">Войти</a>
+      <a href="#signup" class="btn btn-primary" data-i18n="nav.cta">Начать бесплатно <span class="arrow">→</span></a>
+      <button class="burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" aria-hidden="true">
+  <a href="#how" data-i18n="nav.how">Как работает</a>
+  <a href="#benefits" data-i18n="nav.benefits">Выгоды</a>
+  <a href="#integrations" data-i18n="nav.integrations">Интеграции</a>
+  <a href="#pricing" data-i18n="nav.pricing">Тарифы</a>
+  <a href="#faq" data-i18n="nav.faq">FAQ</a>
+  <div class="mobile-lang" role="group" aria-label="Язык">
+    <button class="active">RU</button>
+    <button>UZ</button>
+    <button>EN</button>
+  </div>
+  <a href="#login" class="btn btn-ghost" data-i18n="nav.signin">Войти</a>
+  <a href="#signup" class="btn btn-primary" data-i18n="mobile.cta">Начать бесплатно</a>
+</div>
+
+<!-- ============== HERO ============== -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1 data-i18n="hero.h1">ИИ-риелтор,<br />работающий <span class="accent-line">24/7</span></h1>
+      <p class="lead" data-i18n="hero.lead">Agentless отвечает клиентам в Telegram, WhatsApp и Instagram, подбирает объекты из вашей базы, торгуется и назначает встречи — пока вы занимаетесь делами.</p>
+      <div class="hero-ctas">
+        <a href="#signup" class="btn btn-accent btn-lg" data-i18n="hero.cta1">Подключить бесплатно <span class="arrow">→</span></a>
+        <a href="#how" class="btn btn-ghost btn-lg" data-i18n="hero.cta2">▶ Смотреть демо</a>
+      </div>
+      <div class="hero-social">
+        <div data-i18n="hero.social">Уже более <b>100 агентств и риелторов</b> работают с нами</div>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric">
+          <div class="value">24/<span>7</span></div>
+          <div class="label" data-i18n="hero.m1">без выходных и праздников</div>
+        </div>
+        <div class="metric">
+          <div class="value">∞</div>
+          <div class="label" data-i18n="hero.m2">параллельных чатов одновременно</div>
+        </div>
+        <div class="metric">
+          <div class="value">0</div>
+          <div class="label" data-i18n="hero.m3">краж базы клиентов</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone mockup -->
+    <div class="phone-wrap">
+      <div class="channels-bar" aria-hidden="true">
+        <div class="channel-dot online">
+          <span class="ic" style="background:#2AABEE">T</span>
+          Telegram
+        </div>
+        <div class="channel-dot online">
+          <span class="ic" style="background:#25D366">W</span>
+          WhatsApp
+        </div>
+        <div class="channel-dot online">
+          <span class="ic" style="background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF)">I</span>
+          Instagram
+        </div>
+        <div class="channel-dot online">
+          <span class="ic" style="background:#1a1a1a">W</span>
+          Web
+        </div>
+      </div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="tg-header">
+            <div class="tg-back">‹</div>
+            <div class="tg-avatar" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="22" height="22">
+                <circle cx="11.5" cy="13" r="1.9" fill="var(--accent)"/>
+                <circle cx="20.5" cy="13" r="1.9" fill="var(--accent)"/>
+                <path d="M10.2 18.8 C12.4 21.8, 19.6 21.8, 21.8 18.8" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <circle cx="26" cy="7" r="1.6" fill="var(--accent)"/>
+              </svg>
+            </div>
+            <div>
+              <div class="tg-name" data-i18n="phone.name">Agentless · агент Джон</div>
+              <div class="tg-status" data-i18n="phone.status">онлайн</div>
+            </div>
+          </div>
+          <div class="tg-chat">
+            <!-- populated by JS -->
+          </div>
+          <div class="tg-input">
+            <div class="field" data-i18n="phone.field">Сообщение</div>
+            <div class="send">➤</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROBLEM ============== -->
+<section class="problems" data-screen-label="02 Problem">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="prob.eyebrow">Проблема</span>
+      <h2 style="margin-top:16px" data-i18n="prob.h2">Риелтор теряет сделки <span class="serif-italic">каждый день</span></h2>
+      <p class="lead" style="margin-top:18px" data-i18n="prob.lead">Не потому что плохо работает. А потому что один человек не может быть везде одновременно.</p>
+    </div>
+    <div class="problems-grid">
+      <article class="problem-card">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <div class="num">01</div>
+        <h3 data-i18n="prob.1.h">Нет ответа — нет сделки</h3>
+        <p data-i18n="prob.1.b">Более 60% запросов приходят вечером и ночью. Клиент не ждёт — пишет следующему риелтору, кто ответил первым. Каждый пропущенный час стоит денег.</p>
+      </article>
+
+      <article class="problem-card">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        </div>
+        <div class="num">02</div>
+        <h3 data-i18n="prob.2.h">Каналы разрознены</h3>
+        <p data-i18n="prob.2.b">Telegram, WhatsApp, Instagram, сайт — вы переключаетесь между окнами, теряете контекст и путаете клиентов. Ни один инструмент не даёт единой картины.</p>
+      </article>
+
+      <article class="problem-card">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+        </div>
+        <div class="num">03</div>
+        <h3 data-i18n="prob.3.h">Человеческий предел</h3>
+        <p data-i18n="prob.3.b">Один риелтор ведёт 10–15 диалогов одновременно. Устаёт, болеет, уходит в отпуск — и забирает базу контактов с собой. Агентство зависит от одного человека.</p>
+      </article>
+
+      <article class="problem-card">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 7h14M5 12h14M5 17h9"/></svg>
+        </div>
+        <div class="num">04</div>
+        <h3 data-i18n="prob.4.h">Долгий и дорогой цикл</h3>
+        <p data-i18n="prob.4.b">Поиск, переписка, согласование времени, напоминания — всё вручную. Цикл сделки растягивается на 2–4 недели, стоимость привлечения клиента не окупается.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SOLUTION ============== -->
+<section class="solution" data-screen-label="03 Solution">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="sol.eyebrow">Решение</span>
+      <h2 style="margin-top:16px" data-i18n="sol.h2">Agentless — ИИ-агент внутри <span class="serif-italic">вашего</span> агентства</h2>
+      <p class="lead" style="margin-top:18px" data-i18n="sol.lead">Подключается к вашей базе объектов и начинает работать как лучший сотрудник: отвечает, подбирает, торгуется, записывает на просмотр.</p>
+    </div>
+
+    <div class="solution-grid">
+      <article class="feature-card">
+        <div class="icon-lg" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12c0 4-4 7-9 7-1.4 0-2.7-.2-3.9-.6L4 20l1-3.4C3.7 15.3 3 13.7 3 12c0-4 4-7 9-7s9 3 9 7Z"/></svg>
+        </div>
+        <div class="feat-num" data-i18n="sol.f1.num">01 · ОМНИКАНАЛЬНОСТЬ</div>
+        <h3 data-i18n="sol.f1.h">Единый агент для всех каналов</h3>
+        <p data-i18n="sol.f1.b">Telegram, WhatsApp, Instagram DM и веб-чат — один агент принимает все входящие. Больше не нужно переключаться между приложениями.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="icon-lg" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg>
+        </div>
+        <div class="feat-num" data-i18n="sol.f2.num">02 · МУЛЬТИЯЗЫЧНОСТЬ</div>
+        <h3 data-i18n="sol.f2.h">Говорит на десятках языков</h3>
+        <p data-i18n="sol.f2.b">Клиент пишет как привык — Agentless отвечает на его языке. Понимает разговорные обороты, диалекты и переключения языка прямо в сообщении.</p>
+        <div class="lang-chips">
+          <span class="lang-chip" data-i18n="sol.f2.lang.ru">Русский</span>
+          <span class="lang-chip">O‘zbekcha</span>
+          <span class="lang-chip">Қазақша</span>
+          <span class="lang-chip ar">العربية</span>
+          <span class="lang-chip" data-i18n="sol.f2.lang.en">English</span>
+          <span class="lang-chip">Türkçe</span>
+          <span class="lang-chip">Toҷикӣ</span>
+          <span class="lang-chip">Кыргызча</span>
+          <span class="lang-chip more" data-i18n="sol.f2.more">+ 22 языка</span>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <div class="icon-lg" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9 12 3l9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9Z"/><path d="M9 21v-7h6v7"/></svg>
+        </div>
+        <div class="feat-num" data-i18n="sol.f3.num">03 · ПОДБОР</div>
+        <h3 data-i18n="sol.f3.h">Подбирает из вашей базы</h3>
+        <p data-i18n="sol.f3.b">Читает описания, сравнивает с запросом клиента, ранжирует по совпадению и отправляет лучшие варианты с фото и характеристиками.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="icon-lg" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+        </div>
+        <div class="feat-num" data-i18n="sol.f4.num">04 · ТОРГ</div>
+        <h3 data-i18n="sol.f4.h">Торгуется автономно</h3>
+        <p data-i18n="sol.f4.b">Вы задаёте минимально допустимую цену — Agentless ведёт переговоры сам. Подключает вас только если клиент выходит за допустимые границы.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="icon-lg" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/><circle cx="12" cy="14" r="2"/></svg>
+        </div>
+        <div class="feat-num" data-i18n="sol.f5.num">05 · КАЛЕНДАРЬ</div>
+        <h3 data-i18n="sol.f5.h">Назначает встречи в ваш календарь</h3>
+        <p data-i18n="sol.f5.b">Интеграция с Google Calendar и Outlook. Предлагает клиенту удобное время, фиксирует встречу и напоминает обеим сторонам за 24 ч и за 1 ч.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="icon-lg" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div class="feat-num" data-i18n="sol.f6.num">06 · БЕЗОПАСНОСТЬ</div>
+        <h3 data-i18n="sol.f6.h">Ваша база в безопасности</h3>
+        <p data-i18n="sol.f6.b">Agentless работает с вашими данными, но никогда не копирует и не передаёт их третьим лицам. Контакты и объекты остаются только у вас.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS ============== -->
+<section class="how" id="how" data-screen-label="04 How it works">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="how.eyebrow">Как это работает</span>
+      <h2 style="margin-top:16px" data-i18n="how.h2">От запроса до встречи — <span class="serif-italic">5 шагов</span></h2>
+      <p class="lead" style="margin-top:18px" data-i18n="how.lead">Посмотрите, как Agentless ведёт клиента от первого сообщения до назначенного просмотра.</p>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="step">
+      <div class="step-text">
+        <div class="step-num" data-i18n="how.s1.num">01 <span class="label-tiny">Шаг</span></div>
+        <h3 data-i18n="how.s1.h">Клиент пишет в мессенджер</h3>
+        <p class="step-desc" data-i18n="how.s1.d">Покупатель отправляет сообщение в Telegram, WhatsApp или Instagram DM в любое время суток. Agentless мгновенно принимает запрос — ни один чат не остаётся без ответа.</p>
+        <ul>
+          <li data-i18n="how.s1.l1">Работает 24/7, без выходных</li>
+          <li data-i18n="how.s1.l2">Отвечает менее чем за 1 минуту</li>
+          <li data-i18n="how.s1.l3">Параллельно ведёт любое количество чатов</li>
+        </ul>
+      </div>
+      <div class="step-visual">
+        <div class="mock">
+          <div class="mock-window">
+            <div class="mock-dots"><span></span><span></span><span></span></div>
+            <div class="mock-title" data-i18n="how.s1.mt">Входящие · Telegram</div>
+          </div>
+          <div class="mock-channels">
+            <div class="mock-channel on"><span class="dot"></span>Telegram</div>
+            <div class="mock-channel on"><span class="dot"></span>WhatsApp</div>
+            <div class="mock-channel on"><span class="dot"></span>Instagram</div>
+            <div class="mock-channel on"><span class="dot"></span>Web-chat</div>
+          </div>
+          <div class="mock-conv">
+            <div class="bubble in" data-i18n="how.s1.b1">Привет! Хочу снять 2-комнатную квартиру в Ташкенте<span class="stamp">23:47 · Майк</span></div>
+            <div class="bubble ai" data-i18n="how.s1.b2">Привет! Уже ищу по базе — уточним пару деталей?<span class="stamp">23:47 · Agentless</span></div>
+            <span class="response-time" data-i18n="how.s1.rt">⚡ Ответ за 0:42 сек</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step flip">
+      <div class="step-text">
+        <div class="step-num" data-i18n="how.s2.num">02 <span class="label-tiny">Шаг</span></div>
+        <h3 data-i18n="how.s2.h">Квалификация клиента</h3>
+        <p class="step-desc" data-i18n="how.s2.d">Agentless задаёт точечные вопросы как опытный риелтор: бюджет, район, тип жилья, сроки, пожелания. Никаких форм — только живой диалог. Профиль формируется автоматически.</p>
+        <ul>
+          <li data-i18n="how.s2.l1">Понимает «около метро», «с ремонтом», «тихий район»</li>
+          <li data-i18n="how.s2.l2">Собирает профиль за 2–3 сообщения</li>
+          <li data-i18n="how.s2.l3">Сохраняет контекст на протяжении всего диалога</li>
+        </ul>
+      </div>
+      <div class="step-visual">
+        <div class="mock">
+          <div class="mock-window">
+            <div class="mock-dots"><span></span><span></span><span></span></div>
+            <div class="mock-title" data-i18n="how.s2.mt">Диалог · профилирование</div>
+          </div>
+          <div class="mock-conv">
+            <div class="bubble ai" data-i18n="how.s2.b1">Какой бюджет и район предпочитаете?</div>
+            <div class="bubble in" data-i18n="how.s2.b2">До $600, желательно Юнусабадский или МУ р-н</div>
+            <div class="bubble ai" data-i18n="how.s2.b3">С мебелью? Когда планируете заехать?</div>
+            <div class="bubble in" data-i18n="how.s2.b4">Да, с мебелью. С 1 августа</div>
+            <div class="system-msg" data-i18n="how.s2.sys">✓ Профиль сформирован</div>
+          </div>
+          <div class="profile-card">
+            <div class="pc-title" data-i18n="how.s2.pct">Профиль клиента · Майк</div>
+            <div class="profile-grid">
+              <div data-i18n="how.s2.p1"><span class="k">Тип</span><span class="v">2к · аренда</span></div>
+              <div data-i18n="how.s2.p2"><span class="k">Бюджет</span><span class="v">до $600</span></div>
+              <div data-i18n="how.s2.p3"><span class="k">Район</span><span class="v">Юнусабад, МУ</span></div>
+              <div data-i18n="how.s2.p4"><span class="k">Мебель</span><span class="v">да</span></div>
+              <div data-i18n="how.s2.p5"><span class="k">Заезд</span><span class="v">1 августа</span></div>
+              <div data-i18n="how.s2.p6"><span class="k">Канал</span><span class="v">Telegram</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step">
+      <div class="step-text">
+        <div class="step-num" data-i18n="how.s3.num">03 <span class="label-tiny">Шаг</span></div>
+        <h3 data-i18n="how.s3.h">Подбор объектов из базы</h3>
+        <p class="step-desc" data-i18n="how.s3.d">Agentless сканирует всю базу агентства, читает описания, сравнивает каждый объект с профилем клиента и отправляет лучшие варианты с фото, ценой и объяснением — почему этот объект подходит именно ему.</p>
+        <ul>
+          <li data-i18n="how.s3.l1">Анализирует текстовые описания объектов</li>
+          <li data-i18n="how.s3.l2">Ранжирует по проценту совпадения с запросом</li>
+          <li data-i18n="how.s3.l3">Объясняет клиенту, почему объект подходит</li>
+        </ul>
+      </div>
+      <div class="step-visual">
+        <div class="mock">
+          <div class="mock-window">
+            <div class="mock-dots"><span></span><span></span><span></span></div>
+            <div class="mock-title" data-i18n="how.s3.mt">3 объекта найдены в базе</div>
+          </div>
+          <div class="props">
+            <div class="prop">
+              <div class="pic warm"><span class="room-icon">2к</span></div>
+              <div class="body">
+                <div class="title" data-i18n="how.s3.t1">ул. Амира Темура, 9 эт.</div>
+                <div class="meta" data-i18n="how.s3.m1">Юнусабадский · с мебелью</div>
+                <div class="price">$550 / мес</div>
+              </div>
+              <span class="badge high">98%</span>
+            </div>
+            <div class="prop">
+              <div class="pic"><span class="room-icon">2к</span></div>
+              <div class="body">
+                <div class="title" data-i18n="how.s3.t2">Мирзо-Улугбек р-н</div>
+                <div class="meta" data-i18n="how.s3.m2">ремонт 2023 · с мебелью</div>
+                <div class="price">$580 / мес</div>
+              </div>
+              <span class="badge mid">91%</span>
+            </div>
+            <div class="prop dim">
+              <div class="pic cool"><span class="room-icon">2к</span></div>
+              <div class="body">
+                <div class="title" data-i18n="how.s3.t3">Чиланзарский р-н</div>
+                <div class="meta" data-i18n="how.s3.m3">без мебели</div>
+                <div class="price">$490 / мес</div>
+              </div>
+              <span class="badge low">74%</span>
+            </div>
+          </div>
+          <div class="bubble ai" style="margin-top:12px" data-i18n="how.s3.bub">Нашёл 3 варианта. Лучший — Амира Темура: 2к, $550, мебель, Юнусабад. Показать фото?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step flip">
+      <div class="step-text">
+        <div class="step-num" data-i18n="how.s4.num">04 <span class="label-tiny">Шаг</span></div>
+        <h3 data-i18n="how.s4.h">Переговоры и торг</h3>
+        <p class="step-desc" data-i18n="how.s4.d">Клиент хочет снизить цену? Agentless ведёт переговоры самостоятельно в рамках минимального коридора, который вы задаёте один раз в настройках. Вы подключаетесь только при выходе за границы.</p>
+        <ul>
+          <li data-i18n="how.s4.l1">Вы задаёте минимальную цену один раз</li>
+          <li data-i18n="how.s4.l2">Agentless торгуется мягко и аргументированно</li>
+          <li data-i18n="how.s4.l3">Уведомляет вас при выходе за границы</li>
+        </ul>
+      </div>
+      <div class="step-visual">
+        <div class="mock">
+          <div class="mock-window">
+            <div class="mock-dots"><span></span><span></span><span></span></div>
+            <div class="mock-title" data-i18n="how.s4.mt">Коридор торга · Амира Темура</div>
+          </div>
+          <div class="neg-settings">
+            <div class="neg-row" data-i18n="how.s4.nr1"><span>Цена объекта</span><b>$550</b></div>
+            <div class="neg-row" data-i18n="how.s4.nr2"><span>Минимум</span><b>$520</b></div>
+            <div class="neg-bar"><div class="pin"></div></div>
+            <div class="neg-stamps" data-i18n="how.s4.ns"><span>$520</span><span>$530 · договорено</span><span>$550</span></div>
+          </div>
+          <div class="mock-conv">
+            <div class="bubble in" data-i18n="how.s4.b1">Можете сделать $500?</div>
+            <div class="bubble ai" data-i18n="how.s4.b2">Обсудил с владельцем — готовы на $530/мес при оплате за 2 месяца вперёд. Лучшее предложение в этом районе с мебелью. Подходит?</div>
+            <div class="bubble in" data-i18n="how.s4.b3">Договорились на $530!</div>
+            <div class="system-msg" data-i18n="how.s4.sys">✓ Условия согласованы · $530/мес</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step">
+      <div class="step-text">
+        <div class="step-num" data-i18n="how.s5.num">05 <span class="label-tiny">Шаг</span></div>
+        <h3 data-i18n="how.s5.h">Встреча назначена автоматически</h3>
+        <p class="step-desc" data-i18n="how.s5.d">Agentless сам предлагает клиенту удобное время, записывает просмотр в ваш календарь, уведомляет вас и отправляет напоминания обеим сторонам — за 24 часа и за 1 час до встречи.</p>
+        <ul>
+          <li data-i18n="how.s5.l1">Интеграция с Google Calendar и Outlook</li>
+          <li data-i18n="how.s5.l2">Мгновенное уведомление агенту</li>
+          <li data-i18n="how.s5.l3">Напоминания клиенту и агенту автоматически</li>
+        </ul>
+      </div>
+      <div class="step-visual">
+        <div class="mock">
+          <div class="mock-window">
+            <div class="mock-dots"><span></span><span></span><span></span></div>
+            <div class="mock-title" data-i18n="how.s5.mt">Google Calendar · 4 августа</div>
+          </div>
+          <div class="mock-conv">
+            <div class="bubble ai" data-i18n="how.s5.b1">Когда удобно посмотреть — завтра утром или вечером?</div>
+            <div class="bubble in" data-i18n="how.s5.b2">Лучше завтра в 11:30</div>
+            <div class="bubble ai" data-i18n="how.s5.b3">Записал! Просмотр 4 августа в 11:30. Адрес: ул. Амира Темура. Напомню за час.</div>
+          </div>
+          <div class="calendar">
+            <div class="cal-head">
+              <span class="month" data-i18n="how.s5.month">Август 2026</span>
+              <span class="arrows"><span>‹</span><span>›</span></span>
+            </div>
+            <div class="cal-days">
+              <div class="corner"></div>
+              <div class="day" data-i18n="how.s5.d1">Пн 3</div>
+              <div class="day today" data-i18n="how.s5.d2">Вт 4</div>
+              <div class="day" data-i18n="how.s5.d3">Ср 5</div>
+              <div class="day" data-i18n="how.s5.d4">Чт 6</div>
+            </div>
+            <div class="cal-grid">
+              <div class="cal-time">10:00</div>
+              <div class="cal-slot"></div>
+              <div class="cal-slot"></div>
+              <div class="cal-slot"></div>
+              <div class="cal-slot"></div>
+
+              <div class="cal-time">11:00</div>
+              <div class="cal-slot"></div>
+              <div class="cal-event" data-i18n="how.s5.cev"><span class="ev-mark">Agentless</span>11:30 · Просмотр<br/>Амира Темура</div>
+              <div class="cal-slot"></div>
+              <div class="cal-slot"></div>
+
+              <div class="cal-time">12:00</div>
+              <div class="cal-slot"></div>
+              <div class="cal-slot"></div>
+              <div class="cal-slot"></div>
+              <div class="cal-slot"></div>
+            </div>
+          </div>
+          <div class="push-notif">
+            <div class="app-ico">K</div>
+            <div class="pn-body">
+              <div class="pn-title" data-i18n="how.s5.pnt">Новая встреча от Agentless <small>сейчас</small></div>
+              <div class="pn-text" data-i18n="how.s5.pntx">Клиент Майк · 4 августа, 11:30 · ул. Амира Темура</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BENEFITS / COMPARE ============== -->
+<section id="benefits" data-screen-label="05 Benefits">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="ben.eyebrow">Выгода для вас</span>
+      <h2 style="margin-top:16px" data-i18n="ben.h2">Что меняется после подключения <span class="serif-italic">Agentless</span></h2>
+    </div>
+
+    <div class="compare-wrap">
+      <div class="compare-col before">
+        <h3 data-i18n="ben.before">Без Agentless</h3>
+        <div class="compare-item" data-i18n="ben.b1">Отвечаете только в рабочее время</div>
+        <div class="compare-item" data-i18n="ben.b2">Ведёте 10–15 чатов, остальные теряются</div>
+        <div class="compare-item" data-i18n="ben.b3">Переключаетесь между Telegram, WA, Instagram вручную</div>
+        <div class="compare-item" data-i18n="ben.b4">Клиент ждёт подборку часами</div>
+        <div class="compare-item" data-i18n="ben.b5">Согласование встречи — несколько сообщений</div>
+        <div class="compare-item" data-i18n="ben.b6">Риелтор уходит и забирает базу</div>
+        <div class="compare-item" data-i18n="ben.b7">Цикл сделки 2–4 недели</div>
+      </div>
+      <div class="compare-divider"><div class="arrow-pill">→</div></div>
+      <div class="compare-col after">
+        <h3 data-i18n="ben.after">С Agentless</h3>
+        <div class="compare-item" data-i18n="ben.a1">Клиент получает ответ в любое время суток</div>
+        <div class="compare-item" data-i18n="ben.a2">Ведёте неограниченное количество чатов параллельно</div>
+        <div class="compare-item" data-i18n="ben.a3">Все каналы в одном агенте</div>
+        <div class="compare-item" data-i18n="ben.a4">Подборка из базы — за секунды</div>
+        <div class="compare-item" data-i18n="ben.a5">Встреча в календаре — автоматически</div>
+        <div class="compare-item" data-i18n="ben.a6">База остаётся у вас навсегда</div>
+        <div class="compare-item" data-i18n="ben.a7">Цикл сделки в 4 раза быстрее</div>
+      </div>
+    </div>
+
+    <div class="compare-metrics">
+      <div class="metric">
+        <div class="value" data-target="4" data-prefix="×">×4</div>
+        <div class="label" data-i18n="ben.cm1">быстрее цикл сделки</div>
+      </div>
+      <div class="metric">
+        <div class="value" data-target="100" data-suffix="%">100%</div>
+        <div class="label" data-i18n="ben.cm2">лидов получают ответ</div>
+      </div>
+      <div class="metric">
+        <div class="value" data-target="0">0</div>
+        <div class="label" data-i18n="ben.cm3">потерянных чатов</div>
+      </div>
+    </div>
+
+    <!-- ROI / Funnel -->
+    <div class="roi-panel">
+      <div class="roi-head">
+        <div>
+          <span class="eyebrow" data-i18n="roi.eyebrow">Экономика подключения</span>
+          <h3 data-i18n="roi.h3">Та же база лидов — <span class="serif-italic">в 3,5 раза больше сделок</span></h3>
+          <p class="roi-sub" data-i18n="roi.sub">Что происходит со 100 одинаковыми входящими сообщениями за месяц</p>
+        </div>
+        <div class="roi-legend">
+          <span data-i18n="roi.leg.b"><span class="dot before"></span>Без&nbsp;Agentless</span>
+          <span data-i18n="roi.leg.a"><span class="dot after"></span>С&nbsp;Agentless</span>
+        </div>
+      </div>
+
+      <div class="funnel" data-funnel>
+        <div class="funnel-row">
+          <div class="funnel-label" data-i18n="roi.f1">Получили запрос</div>
+          <div class="bar-track before"><div class="fill" data-w="100"></div><span class="num">100</span></div>
+          <div class="bar-track after"><div class="fill" data-w="100"></div><span class="num">100</span></div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label" data-i18n="roi.f2">Ответили в&nbsp;течение часа</div>
+          <div class="bar-track before"><div class="fill" data-w="38"></div><span class="num">38</span></div>
+          <div class="bar-track after"><div class="fill" data-w="100"></div><span class="num">100</span></div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label" data-i18n="roi.f3">Квалифицировали</div>
+          <div class="bar-track before"><div class="fill" data-w="24"></div><span class="num">24</span></div>
+          <div class="bar-track after"><div class="fill" data-w="78"></div><span class="num">78</span></div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label" data-i18n="roi.f4">Назначили просмотр</div>
+          <div class="bar-track before"><div class="fill" data-w="11"></div><span class="num">11</span></div>
+          <div class="bar-track after"><div class="fill" data-w="42"></div><span class="num">42</span></div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-label" data-i18n="roi.f5">Закрыли сделку</div>
+          <div class="bar-track before"><div class="fill" data-w="4"></div><span class="num">4</span></div>
+          <div class="bar-track after"><div class="fill" data-w="14"></div><span class="num">14</span></div>
+        </div>
+      </div>
+
+      <div class="roi-stats">
+        <div class="roi-stat">
+          <div class="v"><span class="prefix">×</span>3,5</div>
+          <div class="l" data-i18n="roi.s1">больше закрытых сделок<br/>с того&nbsp;же объёма лидов</div>
+        </div>
+        <div class="roi-stat">
+          <div class="v"><span class="prefix">+</span>180<span class="suffix">%</span></div>
+          <div class="l" data-i18n="roi.s2">тёплых лидов после&nbsp;квалификации</div>
+        </div>
+        <div class="roi-stat highlight">
+          <div class="v"><span class="prefix">+</span>$8&nbsp;400</div>
+          <div class="l" data-i18n="roi.s3">средний прирост выручки риелтора в&nbsp;месяц</div>
+        </div>
+        <div class="roi-stat">
+          <div class="v" data-i18n="roi.s4v">6&nbsp;дней</div>
+          <div class="l" data-i18n="roi.s4">средняя окупаемость подписки Agentless</div>
+        </div>
+      </div>
+
+      <p class="roi-note" data-i18n="roi.note">Расчёт на основе среднего риелтора в Ташкенте и Алматы: ~100 входящих сообщений в месяц, средняя комиссия со сделки $600. Данные обновляются ежеквартально на&nbsp;основе клиентов&nbsp;Agentless.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== INTEGRATIONS ============== -->
+<section id="integrations" class="integrations" data-screen-label="06 Integrations" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="int.eyebrow">Интеграции</span>
+      <h2 style="margin-top:16px" data-i18n="int.h2">Работает с инструментами, <span class="serif-italic">которые вы уже используете</span></h2>
+      <p class="lead" style="margin-top:18px" data-i18n="int.lead">Не нужно менять привычный стек. Agentless встраивается в ваши процессы за 15 минут.</p>
+    </div>
+
+    <div class="int-grid">
+      <div class="int-section-label" data-i18n="int.cat.msg">Мессенджеры</div>
+      <div class="int-card">
+        <div class="logo-box" style="background:#2AABEE">TG</div>
+        <div class="int-name">Telegram</div>
+        <div class="int-cat" data-i18n="int.tg.cat">Bot API</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+      <div class="int-card">
+        <div class="logo-box" style="background:#25D366">WA</div>
+        <div class="int-name" data-i18n="int.wa.n">WhatsApp Business</div>
+        <div class="int-cat" data-i18n="int.wa.cat">Cloud API</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+      <div class="int-card">
+        <div class="logo-box" style="background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF)">IG</div>
+        <div class="int-name" data-i18n="int.ig.n">Instagram Direct</div>
+        <div class="int-cat" data-i18n="int.ig.cat">Meta Graph API</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+      <div class="int-card">
+        <div class="logo-box" style="background:var(--ink);color:var(--accent)">W</div>
+        <div class="int-name" data-i18n="int.web.n">Веб-виджет</div>
+        <div class="int-cat" data-i18n="int.web.cat">любой сайт</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+
+      <div class="int-section-label" data-i18n="int.cat.db">Базы и таблицы</div>
+      <div class="int-card">
+        <div class="logo-box" style="background:#0F9D58">GS</div>
+        <div class="int-name">Google Sheets</div>
+        <div class="int-cat" data-i18n="int.gs.cat">синхронизация</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+      <div class="int-card">
+        <div class="logo-box" style="background:#1F6E43">XL</div>
+        <div class="int-name">Excel / CSV</div>
+        <div class="int-cat" data-i18n="int.xl.cat">импорт файлов</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+      <div class="int-card">
+        <div class="logo-box" style="background:var(--accent);color:var(--ink)">K</div>
+        <div class="int-name" data-i18n="int.kdb.n">База Agentless</div>
+        <div class="int-cat" data-i18n="int.kdb.cat">встроено</div>
+        <span class="int-status">встроено</span>
+      </div>
+
+      <div class="int-section-label" data-i18n="int.cat.cal">Календари</div>
+      <div class="int-card">
+        <div class="logo-box" style="background:#4285F4">GC</div>
+        <div class="int-name">Google Calendar</div>
+        <div class="int-cat" data-i18n="int.gc.cat">двусторонняя синхр.</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+      <div class="int-card">
+        <div class="logo-box" style="background:#0078D4">OL</div>
+        <div class="int-name">Outlook Calendar</div>
+        <div class="int-cat" data-i18n="int.ol.cat">Microsoft 365</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+
+      <div class="int-section-label" data-i18n="int.cat.crm">CRM <span style="text-transform:none;color:var(--muted-2);font-weight:500">— тариф Агентство</span></div>
+      <div class="int-card">
+        <div class="logo-box" style="background:#FF6F00">B24</div>
+        <div class="int-name">Bitrix24</div>
+        <div class="int-cat" data-i18n="int.b24.cat">REST API</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+      <div class="int-card">
+        <div class="logo-box" style="background:#9CCB3B">AMO</div>
+        <div class="int-name">AmoCRM</div>
+        <div class="int-cat" data-i18n="int.amo.cat">webhook</div>
+        <span class="int-status">поддерживается</span>
+      </div>
+    </div>
+
+    <p class="int-footnote" data-i18n="int.foot">Нет вашей интеграции? <a href="#contact">Напишите нам</a> — добавим в следующем обновлении.</p>
+  </div>
+</section>
+
+<!-- ============== ONBOARDING ============== -->
+<section class="onboard" data-screen-label="07 Onboarding">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="ob.eyebrow">Подключение за 15 минут</span>
+      <h2 style="margin-top:16px" data-i18n="ob.h2">Запустить Agentless проще, <span class="serif-italic">чем нанять сотрудника</span></h2>
+      <p class="lead" style="margin-top:18px" data-i18n="ob.lead">Не нужно быть технарём. Без кода. Онбординг-менеджер помогает на каждом шаге.</p>
+    </div>
+
+    <div class="onboard-steps">
+      <article class="onboard-step">
+        <div class="ob-num">01</div>
+        <div class="ob-time" data-i18n="ob.t1">2 минуты</div>
+        <h3 data-i18n="ob.h1">Регистрация</h3>
+        <p class="ob-body" data-i18n="ob.b1">Создайте аккаунт на agentless.app. Укажите имя, номер телефона, выберите тариф. Доступ — сразу после регистрации.</p>
+      </article>
+
+      <article class="onboard-step">
+        <div class="ob-num">02</div>
+        <div class="ob-time" data-i18n="ob.t2">10 минут</div>
+        <h3 data-i18n="ob.h2.t">Загрузите базу</h3>
+        <p class="ob-body" data-i18n="ob.b2">Два варианта на выбор:</p>
+        <div class="onboard-option">
+          <div class="opt-label" data-i18n="ob.opt1.l">А · Подключить существующую</div>
+          <p data-i18n="ob.opt1.b">Загрузите Google Sheets, Excel или CSV. Agentless сам читает колонки: название, адрес, цена, описание, фото-ссылки.</p>
+        </div>
+        <div class="onboard-option">
+          <div class="opt-label" data-i18n="ob.opt2.l">Б · Создать внутри Agentless</div>
+          <p data-i18n="ob.opt2.b">Встроенный конструктор: добавляйте объекты вручную, заполняйте карточку. Готово к работе сразу.</p>
+        </div>
+      </article>
+
+      <article class="onboard-step">
+        <div class="ob-num">03</div>
+        <div class="ob-time" data-i18n="ob.t3">3 минуты</div>
+        <h3 data-i18n="ob.h3.t">Подключите мессенджер</h3>
+        <p class="ob-body" data-i18n="ob.b3">Привяжите Telegram-бот, WhatsApp Business или Instagram через простую инструкцию. Вставьте токен или авторизуйтесь — Agentless готов принимать клиентов.</p>
+      </article>
+    </div>
+
+    <div class="onboard-checks">
+      <span data-i18n="ob.chk1">Онбординг-менеджер помогает при любых вопросах</span>
+      <span data-i18n="ob.chk2">Видеоинструкции для каждого шага</span>
+      <span data-i18n="ob.chk3">Поддержка на русском и узбекском</span>
+    </div>
+
+    <div class="onboard-cta">
+      <a href="#signup" class="btn btn-accent btn-lg" data-i18n="ob.cta">Начать прямо сейчас — это бесплатно <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRICING ============== -->
+<section id="pricing" class="pricing" data-screen-label="08 Pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="pr.eyebrow">Тарифы</span>
+      <h2 style="margin-top:16px" data-i18n="pr.h2">Простые и <span class="serif-italic">честные</span> цены</h2>
+      <p class="lead" style="margin-top:18px" data-i18n="pr.lead">Начните бесплатно. Платите только когда видите результат.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <article class="price-card">
+        <div class="pc-name" data-i18n="pr.f.n">Фрилансер</div>
+        <div class="pc-price" data-i18n="pr.f.price"><span class="num">$15</span><span class="per">/ мес</span></div>
+        <div class="pc-for" data-i18n="pr.f.for">1 риелтор · до 200 объектов</div>
+        <ul class="pc-includes">
+          <li data-i18n="pr.f.l1">1 мессенджер на выбор</li>
+          <li data-i18n="pr.f.l2">ИИ-квалификация клиентов</li>
+          <li data-i18n="pr.f.l3">Подбор объектов из базы</li>
+          <li data-i18n="pr.f.l4">Автозапись на просмотр</li>
+          <li data-i18n="pr.f.l5">500 диалогов в месяц</li>
+          <li data-i18n="pr.f.l6">Онбординг за 1 день</li>
+          <li data-i18n="pr.f.l7">Поддержка в чате</li>
+        </ul>
+        <div class="pc-cta"><a href="#signup" class="btn btn-ghost" data-i18n="pr.f.cta">Начать бесплатно</a></div>
+        <div class="pc-note" data-i18n="pr.f.note">14 дней бесплатного триала</div>
+      </article>
+
+      <article class="price-card featured">
+        <span class="pc-tag" data-i18n="pr.a.tag">Рекомендуем</span>
+        <div class="pc-name" data-i18n="pr.a.n">Агентство</div>
+        <div class="pc-price" data-i18n="pr.a.price"><span class="num">$199</span><span class="per">/ мес</span></div>
+        <div class="pc-for" data-i18n="pr.a.for">до 10 агентов · неограниченная база</div>
+        <ul class="pc-includes">
+          <li data-i18n="pr.a.l1">Все мессенджеры: TG · WA · IG · веб</li>
+          <li data-i18n="pr.a.l2">ИИ-квалификация и подбор</li>
+          <li data-i18n="pr.a.l3">Автоторг в коридоре цен</li>
+          <li data-i18n="pr.a.l4">Автозапись Google Calendar / Outlook</li>
+          <li data-i18n="pr.a.l5">Неограниченные диалоги</li>
+          <li data-i18n="pr.a.l6">CRM-интеграции: Bitrix24, AmoCRM</li>
+          <li data-i18n="pr.a.l7">Аналитика диалогов и конверсий</li>
+          <li data-i18n="pr.a.l8">Выделенный онбординг-менеджер</li>
+          <li data-i18n="pr.a.l9">Приоритетная поддержка</li>
+        </ul>
+        <div class="pc-cta"><a href="#signup" class="btn btn-accent" data-i18n="pr.a.cta">Подключить агентство</a></div>
+        <div class="pc-note" style="color:oklch(0.75 0.005 250)" data-i18n="pr.a.note">14 дней бесплатного триала</div>
+      </article>
+
+      <article class="price-card">
+        <div class="pc-name" data-i18n="pr.e.n">Enterprise</div>
+        <div class="pc-price" data-i18n="pr.e.price"><span class="num">По запросу</span></div>
+        <div class="pc-for" data-i18n="pr.e.for">Крупные агентства, сети, застройщики</div>
+        <ul class="pc-includes">
+          <li data-i18n="pr.e.l1">Всё из тарифа Агентство</li>
+          <li data-i18n="pr.e.l2">Неограниченное количество агентов</li>
+          <li data-i18n="pr.e.l3">Кастомные интеграции</li>
+          <li data-i18n="pr.e.l4">Выделенный аккаунт-менеджер</li>
+          <li data-i18n="pr.e.l5">SLA и гарантии uptime</li>
+          <li data-i18n="pr.e.l6">White-label под вашим брендом</li>
+        </ul>
+        <div class="pc-cta"><a href="#contact" class="btn btn-primary" data-i18n="pr.e.cta">Связаться с нами</a></div>
+        <div class="pc-note" data-i18n="pr.e.note">Индивидуальное предложение</div>
+      </article>
+    </div>
+
+    <p class="pricing-footnote" data-i18n="pr.foot">Все тарифы включают 14 дней бесплатного периода. Карта не нужна для старта. Отменить можно в любой момент.</p>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section id="faq" class="faq" data-screen-label="09 FAQ">
+  <div class="container">
+    <div class="section-head left">
+      <span class="eyebrow" data-i18n="faq.eyebrow">FAQ</span>
+      <h2 style="margin-top:16px" data-i18n="faq.h2">Часто задаваемые <span class="serif-italic">вопросы</span></h2>
+    </div>
+
+    <div class="faq-wrap">
+      <div class="faq-cats">
+        <button class="faq-cat active" data-cat="security" data-i18n="faq.cat.sec">Безопасность и данные</button>
+        <button class="faq-cat" data-cat="ai" data-i18n="faq.cat.ai">Про ИИ и качество</button>
+        <button class="faq-cat" data-cat="tech" data-i18n="faq.cat.tech">Подключение</button>
+        <button class="faq-cat" data-cat="billing" data-i18n="faq.cat.bill">Тарифы и оплата</button>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-group active" data-cat="security">
+          <div class="group-title" data-i18n="faq.gt.sec">Безопасность и данные</div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.sec1">Мои объекты и клиенты в безопасности? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.sec1">Да. Ваша база хранится на защищённых серверах и никогда не передаётся третьим лицам. Agentless использует данные только для работы вашего агента. Вы можете выгрузить или удалить все данные в любой момент.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.sec2">Что будет с базой, если я отменю подписку? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.sec2">Вы получите полный экспорт базы в Excel или CSV в течение 24 часов после отмены. Данные хранятся ещё 30 дней после окончания подписки.</div></div>
+          </div>
+        </div>
+
+        <div class="faq-group" data-cat="ai">
+          <div class="group-title" data-i18n="faq.gt.ai">Про ИИ и качество ответов</div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.ai1">Как Agentless понимает клиента? Это чат-бот с кнопками? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.ai1">Нет. Agentless использует языковую модель (LLM), которая понимает свободный текст на русском, узбекском и казахском языках. Клиент пишет как обычно — без кнопок и команд.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.ai2">Что если ИИ ответит неправильно или клиент задаст сложный вопрос? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.ai2">Agentless умеет корректно завершать диалог и передавать сложные случаи живому агенту с уведомлением. Вы всегда видите историю переписки и можете подключиться в любой момент.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.ai3">Можно ли настроить тон и стиль общения? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.ai3">Да. В настройках вы задаёте имя агента, стиль общения (формальный / дружелюбный), приветственное сообщение и ограничения по темам.</div></div>
+          </div>
+        </div>
+
+        <div class="faq-group" data-cat="tech">
+          <div class="group-title" data-i18n="faq.gt.tech">Подключение и техническое</div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.tech1">Нужен ли программист для подключения? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.tech1">Нет. Подключение занимает 15 минут и не требует технических знаний. Онбординг-менеджер помогает пройти все шаги.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.tech2">Какой формат должна быть база объектов? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.tech2">Google Sheets, Excel (.xlsx) или CSV. Минимально нужны колонки: название, адрес, цена, описание. Фото — опционально в виде ссылок.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.tech3">Работает ли с несколькими агентами в одном агентстве? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.tech3">Да. На тарифе «Агентство» до 10 агентов получают доступ к общей базе и видят свои диалоги в отдельных рабочих пространствах.</div></div>
+          </div>
+        </div>
+
+        <div class="faq-group" data-cat="billing">
+          <div class="group-title" data-i18n="faq.gt.bill">Тарифы и оплата</div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.bill1">Как работает 14-дневный бесплатный период? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.bill1">Вы регистрируетесь, подключаете базу и мессенджер — и сразу начинаете работать. Карта не нужна. После 14 дней выбираете тариф или останавливаетесь.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-i18n="faq.q.bill2">Можно перейти с Фрилансера на Агентство? <span class="plus" aria-hidden="true"></span></button>
+            <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a.bill2">Да, в любой момент в личном кабинете. Оплата пересчитывается пропорционально.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CTA BANNER ============== -->
+<section data-screen-label="10 CTA">
+  <div class="container">
+    <div class="cta-banner">
+      <h2 data-i18n="cta.h2">Запустите Agentless <span class="serif-italic">сегодня</span></h2>
+      <p class="lead" data-i18n="cta.lead">14 дней бесплатно. Карта не нужна. Отменить можно в любой момент. Онбординг — 15 минут.</p>
+      <div class="hero-ctas cta-banner-actions" style="margin-top:32px">
+        <a href="#signup" class="btn btn-accent btn-lg" data-i18n="cta.cta1">Подключить бесплатно <span class="arrow">→</span></a>
+        <a href="#demo" class="btn btn-ghost btn-lg cta-ghost" data-i18n="cta.cta2">Запросить демо</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer" id="contact" data-screen-label="11 Footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="Agentless">
+          <svg class="logo-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+            <rect width="32" height="32" rx="10" fill="var(--accent)"/>
+            <circle cx="11.5" cy="13" r="1.9" fill="var(--ink)"/>
+            <circle cx="20.5" cy="13" r="1.9" fill="var(--ink)"/>
+            <path d="M10.2 18.8 C12.4 21.8, 19.6 21.8, 21.8 18.8" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="26" cy="7" r="1.6" fill="var(--ink)"/>
+          </svg>
+          <span>Agentless</span>
+        </a>
+        <p data-i18n="foot.tag">ИИ-риелтор для агентств и фрилансеров в Центральной Азии.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Telegram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="foot.col1">Продукт</h5>
+        <ul>
+          <li><a href="#how" data-i18n="foot.l1">Как работает</a></li>
+          <li><a href="#pricing" data-i18n="foot.l2">Тарифы</a></li>
+          <li><a href="#integrations" data-i18n="foot.l3">Интеграции</a></li>
+          <li><a href="#" data-i18n="foot.l4">Обновления</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="foot.col2">Компания</h5>
+        <ul>
+          <li><a href="#" data-i18n="foot.l5">О нас</a></li>
+          <li><a href="#" data-i18n="foot.l6">Блог</a></li>
+          <li><a href="#" data-i18n="foot.l7">Карьера</a></li>
+          <li><a href="#contact" data-i18n="foot.l8">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="foot.col3">Поддержка</h5>
+        <ul>
+          <li><a href="#" data-i18n="foot.l9">Документация</a></li>
+          <li><a href="#" data-i18n="foot.l10">Онбординг</a></li>
+          <li><a href="#faq" data-i18n="foot.l11">FAQ</a></li>
+          <li><a href="#" data-i18n="foot.l12">Написать в поддержку</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="foot.col4">Контакты</h5>
+        <ul>
+          <li><a href="mailto:hello@agentless.app">hello@agentless.app</a></li>
+          <li><a href="#">@agentless_support</a></li>
+          <li style="color:var(--muted)" data-i18n="foot.city">Ташкент, Узбекистан</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div data-i18n="foot.copy">© 2026 Agentless. Все права защищены.</div>
+      <div class="legal">
+        <a href="#" data-i18n="foot.legal1">Политика конфиденциальности</a>
+        <a href="#" data-i18n="foot.legal2">Условия использования</a>
+        <a href="#" data-i18n="foot.legal3">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
